@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+body,button {
+  font-family: "Inter", sans-serif;
+}
+
+:root{
+  --sidebar-width: 300px;
+  --NavbarHeight:56px;
+}
+
+.sidebar-nav{
+  width:var(--sidebar-width) !important
+}
+
+.sidebar-link{
+  display:flex !important; 
+  align-items: center !important;
+}
+
+.sidebar-link .right-icon{
+  display:inline-flex !important;
+  transition:all ease 0.25s !important;
+}
+
+.sidebar-link[aria-expanded="true"] .right-icon {
+  transform: rotate(180deg);
+}
+
+/* Media Query */
+ 
+ @media (min-width: 992px) { 
+  body{ 
+    overflow: auto !important;
+  }
+
+.offcanvas-backdrop::before{
+  display:none !important; 
+}
+
+.sidebar-nav{
+  transform:none !important;
+  visibility: visible !important;
+  top:var(--NavbarHeight) !important;
+  height: calc(100% - var(--NavbarHeight)) !important;
+}
+main{
+  margin-left: var(--sidebar-width);
+}
+
+} 
+
+
+
+
+.box-header {
+  color: #444;
+  display: block;
+  padding: 10px;
+  position: relative;
+}
+
+
+/* for-form-create-user  */
